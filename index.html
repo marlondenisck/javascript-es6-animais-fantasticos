@@ -1,49 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
   <title>Animais Fantasticos</title>
 </head>
 <body>
-
   <!-- navegacao-->
   <nav class="menu">
     <ul>
-      <li href="#animais">Animais</li>
-      <li href="#faq">Faq</li>
-      <li href="#contato">Contato</li>
-      <li href="#">Dev →</li>
+      <li><a href="#animais">Animais</a></li>
+      <li><a href="#faq">Faq</a></li>
+      <li><a href="#contato">Contato</a></li>
+      <li><a href="#">Dev →</a></li>
     </ul>
   </nav>
-  <!--section principal-->
 
+  <!--section principal-->
   <section class="grid-section animais" id="animais">
-    <h1 class="titulo">Animais Fantasticos</h1>
-    <ul>
+    <h1 class="titulo">Animais Fantásticos</h1>
+    <ul class="animais-lista">
       <li>
-        <img src="./img/imagem1.jpg" >
+        <img src="img/imagem1.jpg">
       </li>
       <li>
-        <img src="./img/imagem2.jpg" >
+        <img src="img/imagem2.jpg">
       </li>
       <li>
-        <img src="./img/imagem3.jpg" >
+        <img src="img/imagem3.jpg">
       </li>
       <li>
-        <img src="./img/imagem4.jpg" >
+        <img src="img/imagem4.jpg">
       </li>
       <li>
-        <img src="./img/imagem5.jpg" >
+        <img src="img/imagem5.jpg">
       </li>
       <li>
-        <img src="./img/imagem6.jpg" >
+        <img src="img/imagem6.jpg">
       </li>
     </ul>
 
     <!-- descricao -->
-    <div class="aniamais-descricao">
+    <div class="animais-descricao">
       <section>
         <h2>Raposa</h2>
         <p>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados
@@ -104,7 +105,7 @@
 
   <!--FAQ-->
   <section class="grid-section faq" id="faq">
-    <h1>Faq</h1>
+    <h1 class="titulo">Faq</h1>
     <dl class="faq-lista">
       <dt>Qual a idade dos animais?</dt>
       <dd>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</dd>
@@ -119,9 +120,9 @@
 
   <!--Contato-->
   <section class="grid-section contato" id="contato">
-    <h1>Contato</h1>
+    <h1 class="titulo">Contato</h1>
     <div class="mapa">
-      <img src="./img/mapa.png">
+      <img src="img/mapa.png">
     </div>
     <ul class="dados">
       <li>email@email.com</li>
@@ -132,7 +133,7 @@
   </section>  
 
   <!--footer-->
-  <footer clas="copy">
+  <footer class="copy">
     <p>Todos os direitos reservados.©</p>
   </footer>
   <script src="./script.js"></script>
