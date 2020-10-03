@@ -1,5 +1,6 @@
-/** Navegacao por tabs */
 
+/** Navegacao por tabs */
+function initTabNav() {
   // 1º Seleciona todas as li`s
   const tabMenu = document.querySelectorAll('.js-tabmenu li');
 
@@ -31,3 +32,8 @@
       });
     });
   }
+}
+
+initTabNav();
+
+
