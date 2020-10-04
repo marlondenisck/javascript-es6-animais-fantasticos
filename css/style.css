@@ -265,3 +265,15 @@ body {
     max-width: 200px;
   }
 }
+
+/* Animacao nas sections ao dar scroll */
+.js .js-animate-scroll {
+  opacity: 0;
+  transition: .3s;
+  transform: translate3d(-30px, 0, 0);
+}
+.js .js-animate-scroll.ativo {
+  opacity: 1;
+  transition: .3s;
+  transform: translate3d(0, 0, 0);
+}
