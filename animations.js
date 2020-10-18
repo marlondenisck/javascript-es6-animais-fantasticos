@@ -2,10 +2,10 @@
 /** Navegacao por tabs */
 function initTabNav() {
   // 1º Seleciona todas as li`s
-  const tabMenu = document.querySelectorAll('.js-tabmenu li');
+  const tabMenu = document.querySelectorAll('[data-tab="menu"] li');
 
   // 2º Seleciona as section para se relacionar as li`s
-  const tabContent = document.querySelectorAll('.js-tabcontent section');
+  const tabContent = document.querySelectorAll('[data-tab="content"] section');
 
   // 2.1º verifica se realmente existe essa section e a li para evitar o lancamento
   // de erros no console  
@@ -21,7 +21,10 @@ function initTabNav() {
       tabContent.forEach((section) => {
         section.classList.remove('ativo');
       });
-      tabContent[index].classList.add('ativo');
+      // pega do atributo datajs qual sera a direcao para animar
+      const direcao = tabContent[index].dataset.anime;
+      // adiciona classe ativo e a direcao para animacao
+      tabContent[index].classList.add('ativo', direcao);
     };
 
     // 5º Adicionar um evento que ao clicar no elemento
@@ -41,7 +44,7 @@ initTabNav();
 function initAccordion() {
   
   // 1º Seleciona o elemento dt
-  const accordionList = document.querySelectorAll('.js-accordion dt');
+  const accordionList = document.querySelectorAll('[data-anime="accordion"] dt');
 
   // variavel a ser usada em varios locais
   const activeClass = 'ativo';
@@ -75,7 +78,7 @@ initAccordion();
 /** Scrool suave */
 function initScrollSuave() {
   // 1º  Seleciona os links que tenham href="#algumaSection"
-  const linksInternos = document.querySelectorAll('.js-menu a[href^="#"]');
+  const linksInternos = document.querySelectorAll('[data-menu="scrollSuave"] a[href^="#"]');
 
   //3º evento
   function scrollToSection(event) {
@@ -106,7 +109,7 @@ initScrollSuave();
 /** Animacao ao dar scroll */
 function initAnimateScrollSections() {
   // 1 Seleciona as sections
-  const sections = document.querySelectorAll('.js-animate-scroll');
+  const sections = document.querySelectorAll('[data-anime="scroll"]');
 
   if(sections.length) {
     // 2 Pega o valor do topo aos 60%
