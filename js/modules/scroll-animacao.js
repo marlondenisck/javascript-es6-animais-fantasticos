@@ -18,8 +18,10 @@ export default function initAnimateScrollSections() {
         // comparando se menor que 0, retorna true ou false
         const isSectionVisible = sectionTopValue - windowHalf60Percent < 0;
         // se true
-        if(isSectionVisible ) {
+        if(isSectionVisible) {
           section.classList.add('ativo');
+        } else if(section.classList.contains('ativo')) {
+          section.classList.remove('ativo');
         }
       });
     }
